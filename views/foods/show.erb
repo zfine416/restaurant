@@ -1,0 +1,21 @@
+<table>
+<thead>
+<tr>
+<td>Name:</td>
+<td>Description:</td>
+<td>Price:</td>
+<td>Allergens:</td>
+</tr>
+<tr>
+<td><%= @foods.name %></td>
+<td><%= @foods.description %></td>
+<td><%= @foods.price %></td>
+<td><%= @foods.allergens %></td>
+</tr>
+</thead>
+
+
+
+</table>
+
+<a href="/foods/<%= @foods.id %>/edit">Edit food</a>

@@ -1,0 +1,8 @@
+<h2>Food Items Available</h2>
+<ul>
+<% @foods.each do |food| %>
+<a href="foods/<%= food.id %>"><%= food.name %></a></br>
+<% end %>
+
+<a href="foods/new">Add New Food Item</a>
+</ul>

@@ -1,0 +1,18 @@
+<h2>Editing <%= @foods.name %></h2>
+
+<form action="/foods/<%= @foods.id %>" method="POST">
+<input type="hidden" name="_method" value="PATCH">
+ Name: <input type="text" name='foods[name]' value="<%= @foods.name %>"><br>
+ 
+ Description: <input type="text" name='foods[description]' value="<%= @foods.description %>"><br>
+
+ Price: <input type="text" name='foods[price]' value="<%= @foods.price %>"><br>
+
+ Allergens: <input type="text" name='foods[allergens]' value="<%= @foods.allergens %>"><br>
+ <input type="submit">
+</form>
+
+<form action="/foods/<%= @foods.id %>" method="POST">
+ <input type="hidden" name="_method" value="DELETE">
+ <input type="submit" value="Delete Food">
+</form>
