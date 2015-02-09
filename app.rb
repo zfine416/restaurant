@@ -64,7 +64,7 @@ class Restaurants < Sinatra::Base
 		erb :"orders/new"
 	end
 
-	post "/orders" do
+	post "/orders" do 
 		orders = Order.create(params[:orders])
 		redirect to "/parties/#{orders.party_id}"
 		# Pry.start(binding)

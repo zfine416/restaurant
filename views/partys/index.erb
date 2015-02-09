@@ -1,0 +1,11 @@
+<div class="all">
+<h2>PARTIES</h2>
+<ul>
+<% @parties.each do |party| %>
+<a href="parties/<%= party.id %>">Party #<%= party.id %></a></br>
+<% end %>
+</ul>
+<br>
+<div class = "add"><a href="parties/new">Add New</a></div>
+
+</div>

@@ -1,0 +1,53 @@
+<div class = "all">
+  <table>
+    <tr>
+      <td>Guests in Party: </td>
+      <td><%= @party.people %></td>
+    </tr>
+    <tr>
+      <td>Seated at: </td>
+      <td><%= @party.created_at.strftime("%I:%M%p") %></td>
+    </tr>
+    <tr>
+      <td>Paid?: </td>
+      <td><%= @party.paid %></td>
+    </tr>
+  </table>
+
+
+  <br>
+  <br>
+  <a class = "edit" href="/parties/<%= @party.id %>/edit">Edit Party</a>
+
+  <div class = "current">
+    <form action="/orders" method="post">
+      <h2> Current Order </h2>
+      <ul>
+        <% @party.foods.uniq.each do |this| %>
+        <li><%= this.name %> x <%= @party.orders.where("food_id=#{this.id}").count %> 
+          <form action="/orders" method="post">
+            <input type = "hidden" name = "_method" value="delete">
+            <input type = "submit" value="delete"> 
+            <input type = "hidden" name = "food_id" value="<%= this.id %>">
+            <input type = "hidden" name = "party_id" value="<%= @party.id %>">
+          </form>
+        </li>
+        <% end %>
+      </ul>
+    </form>
+  </div>
+  <div class = "addnew">
+   <h2>Add New</h2>
+   <form action="/orders" method="post">
+    Food <select name="orders[food_id]">
+    <% @foods.each do |food| %>
+    <option value="<%= food.id %>"><%= food.name %></option>
+    <% end %>
+  </select>
+  <input type="hidden" name="orders[party_id]" value="<%= @party.id %>">
+  <input class = "submit" type = "submit">
+</form>
+</div>
+<br>
+<a class = "receipt" href="/parties/<%= @party.id %>/receipt">RECEIPT</a>
+</div>
