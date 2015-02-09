@@ -16,10 +16,16 @@ updated_at TIMESTAMP);
 
 CREATE TABLE orders(
 id SERIAL PRIMARY KEY,
-partys_id INT NOT NULL,
-foods_id INT NOT NULL,
+party_id INT NOT NULL,
+food_id INT NOT NULL,
 created_at TIMESTAMP,
 updated_at TIMESTAMP);
+
+SELECT orders.partys_id, sum(foods.price) 
+FROM orders JOIN foods 
+ON foods_id=orders.foods_id
+GROUP BY orders.partys_id 
+ORDER BY orders.partys_id ASC; 
 
 	
 

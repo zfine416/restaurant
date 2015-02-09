@@ -1,17 +1,8 @@
-<table>
-<thead>
-<tr>
-<td>Partys_id:</td>
-<td>Foods_id:</td>
-</tr>
-<tr>
-<td><%= @orders.partys_id %></td>
-<td><%= @orders.food_id %></td>
-</tr>
-</thead>
+<h2>Party <%=@party.id%> </h2>
+<ul>
+<% @party.foods.each do |this| %>
+<li><%= this.name %></li>
+<% end %>
+</ul>
 
-
-
-</table>
-
-<a href="/orders/<%= @orders.id %>/edit">Edit food</a>
+<a href="/orders/<%= @party.id %>/edit">Edit Order</a>

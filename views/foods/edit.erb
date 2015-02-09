@@ -8,7 +8,10 @@
 
  Price: <input type="text" name='foods[price]' value="<%= @foods.price %>"><br>
 
- Allergens: <input type="text" name='foods[allergens]' value="<%= @foods.allergens %>"><br>
+ <!-- Allergens: <input type="text" name='foods[allergens]' value="<%= @foods.allergens %>"><br> -->
+  <input name="foods[allergens]" type="hidden" value="false" />
+  <input id="allergens" name="foods[allergens]" type="checkbox" value="true" />
+  <br>
  <input type="submit">
 </form>
 

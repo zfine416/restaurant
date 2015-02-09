@@ -1,3 +1,154 @@
+*{
+	margin:0;
+	padding:0;
+	border:0;
+	font:inherit;
+}
+
 body{
-	background-color: green;
+	background-image: url(http://i.imgur.com/sgc4VlP.gif);
+	background-size: cover;
+}
+.receipt{
+	border: 2px solid #98FB98;
+	border-radius: 8px;
+	font-size: 28px;
+	background-color: black;
+}
+
+.bill{
+	font-size: 24px;
+}
+nav{
+	background-color: rgba(0,0,0,.3);
+	overflow: auto;
+	text-align: center;
+	margin:0 auto;
+
+}
+
+nav li{
+	display:inline;
+}
+
+nav a{
+	text-decoration: none;
+	color:white;
+	font-size: 50px;
+	padding-right: 32px;
+	font-family: 'Lobster', cursive;
+}
+
+nav a:hover{
+	text-decoration: overline;
+	color:#98FB98;
+}
+.formbody{
+	margin:0 auto 0 auto;
+	border-radius: 0 0 10 10;
+	width:66%;
+	text-align: center;
+	padding-top: 25px;
+	font-size: 24px;
+	color: white;
+
+}
+.add{
+	border:2px solid black;
+	display: inline;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 10px;
+	margin-top: 10px;
+	background-color: black;
+}
+.submit{
+	color:green;
+	border-radius: 5px;
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+.submit:hover{
+	cursor:pointer;
+}
+.footer{
+	width:100%;
+	height:30px;
+	bottom:0;
+	left:0;
+	color:white;
+	margin-top: 10px;
+}
+
+h2{
+
+	font-size:34px;
+	text-align: center;
+	padding-top: 16px;
+	padding-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	width:66%;
+	text-align: center;
+	/*border-radius: 0 0 10 10;*/
+	color:white;
+}
+
+main a{
+	text-decoration: none;
+	font-family: 'Libre Baskerville', serif;
+	font-size: 18px;
+	color: white;
+
+}
+
+main a:hover{
+	color:#98FB98;
+}
+.sub{
+	cursor: pointer;
+	margin-top: 15px;
+}
+
+main ul{
+	padding-top: 30px;
+	text-align: center;
+	width:66%;
+	margin: 0 auto 0 auto;
+}
+.all{
+	background-color: rgba(0,0,0,.3);
+	text-align: center;
+	width:66%;
+	margin: 0 auto;
+	color:white;
+	font-family: 'Libre Baskerville', serif;
+	padding-bottom: 15px;
+}
+.new{
+
+	background: green;
+	color:white;
+	width: 15%;
+	margin-left: auto;
+	margin-right: auto;
+	display: inline-block;
+	border-radius: 15px;
+}
+ul{
+	list-style-type: none;
+}
+.new:hover{
+	border: 1px solid black;
+}
+table{
+	text-align: center;
+	margin: 0 auto;
+	width:66%;
+	color: white;
+	padding-top: 25px;
+	font-size: 18px;
+}
+.pink:hover{
+	color:#98FB98;
 }

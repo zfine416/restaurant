@@ -1,8 +1,8 @@
-<h2>Orders</h2>
+<h2>ORDERS</h2>
 <ul>
-<% @orders.each do |order| %>
-<a href="order/<%= order.id %>"><%= order.name %></a></br>
+<% @parties.each do |party| %>
+<a href="orders/<%= party.id %>">Party #:  <%= party.id %></a></br>
 <% end %>
 
-<a href="orders/new">Add New Order</a>
+<div class = "new"><a href="orders/new">Add New</a></div>
 </ul>
