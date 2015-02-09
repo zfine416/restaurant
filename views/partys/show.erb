@@ -35,6 +35,7 @@
         <% end %>
       </ul>
     </form>
+    <a class = "receipt" href="/parties/<%= @party.id %>/receipt">RECEIPT</a>
   </div>
   <div class = "addnew">
    <h2>Add New</h2>
@@ -47,7 +48,8 @@
   <input type="hidden" name="orders[party_id]" value="<%= @party.id %>">
   <input class = "submit" type = "submit">
 </form>
-</div>
+
 <br>
-<a class = "receipt" href="/parties/<%= @party.id %>/receipt">RECEIPT</a>
+
+</div>
 </div>

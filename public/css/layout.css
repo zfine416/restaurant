@@ -22,10 +22,11 @@ body{
 	background-size: cover;
 }
 .receipt{
-	border: 2px solid #98FB98;
 	border-radius: 8px;
 	font-size: 28px;
 	background-color: black;
+	display: inline-block;
+	margin-top: 15px;
 }
 
 .bill{
@@ -118,7 +119,7 @@ main a:hover{
 }
 
 .current{
-	float:left;
+	float:right;
 	overflow: auto;
 }
 .sub{
@@ -145,7 +146,8 @@ main ul{
 }
 .addnew{
 	overflow: auto;
-	float:right;
+	float:left;
+	padding: 10% 0 0 10%;
 }
 .new{
 
