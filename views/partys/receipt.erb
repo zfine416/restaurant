@@ -25,7 +25,7 @@
 </table>
 
 
-<form action="/parties/<%= @party.id %>" method="POST"> 
+<form action="/parties/<%= @party.id %>/checkout" method="POST"> 
 <input type="hidden" name="_method" value="PATCH">
  <label for="paid">Paid</label>
   <input name="parties[paid]" type="hidden" value="false" />

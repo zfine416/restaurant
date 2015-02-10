@@ -133,9 +133,9 @@ class Restaurants < Sinatra::Base
 	end
 
 	patch "/parties/:id" do |id|
-		parties = Party.find(id)
-		parties.update(params[:parties])
-		# Pry.start(binding)
+		party = Party.find(id)
+		party.update(params[:parties])
+		redirect to "/parties"
 	end
 
 	delete "/parties/:id" do |id|
@@ -150,10 +150,13 @@ class Restaurants < Sinatra::Base
 	end
 
 	patch "/parties/:id/checkout" do |id|
+		# Pry.start(binding)
+		party = Party.find(id)
 		if params[:parties][:paid]=="true"
-			redirect to "/parties/#{id}/receipt"
+			party.update(params[:parties])
+			redirect to "/parties/#{id}"
 		end
-		redirect to "/parties/#{parties.id}"
+		redirect to "/parties/#{id}/receipt"
 	end
 	
 
