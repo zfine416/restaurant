@@ -1,16 +1,16 @@
 <div class = "all">
-<form action="/foods" method="post">
-	<h2>Add New Food Item</h2>
-	<div class = "formbody">
-	Name <br><input label = "name" type="text" name="foods[name]"><br>
-	Description <br><input label = "description" type="text" name="foods[description]"><br>
-	<br>Price  $<input type="text" name="foods[price]" pattern="^\d*(\.\d{2}$)?" size="4" title="CDA Currency Format" />
-	Allergens: <input name="foods[allergens]" type="hidden" value="false" />
-	<input id="allergens" name="foods[allergens]" type="checkbox" value="true" />
-	<br>
-	<br>
-	<input class = "submit" type = "submit">
-	</div>
+	<form action="/foods" method="post">
+		<h2>Add New Food Item</h2>
+		<div class = "formbody">
+			Name <br><input label = "name" type="text" name="foods[name]"><br>
+			Description <br><input label = "description" type="text" name="foods[description]"><br>
+			<br>Price  £<input type="text" name="foods[price]" pattern="^\d*(\.\d{2}$)?" size="4" title="CDA Currency Format" />
+			Allergens: <input name="foods[allergens]" type="hidden" value="false" />
+			<input id="allergens" name="foods[allergens]" type="checkbox" value="true" />
+			<br>
+			<br>
+			<input class = "sub" type = "submit">
+		</div>
 
-</form>
+	</form>
 </div>

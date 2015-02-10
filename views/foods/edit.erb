@@ -1,21 +1,23 @@
-<h2>Editing <%= @foods.name %></h2>
+<div class = "all">
+	<h2>Editing <%= @foods.name %></h2>
+	<div class = "formbody">
+		<form action="/foods/<%= @foods.id %>" method="POST">
+			<input type="hidden" name="_method" value="PATCH">
+			Name: <input type="text" name='foods[name]' value="<%= @foods.name %>"><br>
 
-<form action="/foods/<%= @foods.id %>" method="POST">
-<input type="hidden" name="_method" value="PATCH">
- Name: <input type="text" name='foods[name]' value="<%= @foods.name %>"><br>
- 
- Description: <input type="text" name='foods[description]' value="<%= @foods.description %>"><br>
+			Description: <input type="text" name='foods[description]' value="<%= @foods.description %>"><br>
 
- Price: <input type="text" name='foods[price]' value="<%= @foods.price %>"><br>
+			Price: £<input type="text" name='foods[price]' value="<%= @foods.price %>"><br>
 
- <!-- Allergens: <input type="text" name='foods[allergens]' value="<%= @foods.allergens %>"><br> -->
-  <input name="foods[allergens]" type="hidden" value="false" />
-  <input id="allergens" name="foods[allergens]" type="checkbox" value="true" />
-  <br>
- <input type="submit">
-</form>
-
-<form action="/foods/<%= @foods.id %>" method="POST">
- <input type="hidden" name="_method" value="DELETE">
- <input type="submit" value="Delete Food">
-</form>
+			<!-- Allergens: <input type="text" name='foods[allergens]' value="<%= @foods.allergens %>"><br> -->
+			Allergens: <input name="foods[allergens]" type="hidden" value="false" />
+			<input id="allergens" name="foods[allergens]" type="checkbox" value="true" />
+			<br>
+			<input type="submit">
+		</form>
+	</div>
+	<form class = "remove" action="/foods/<%= @foods.id %>" method="POST">
+		<input type="hidden" name="_method" value="DELETE">
+		<input type="submit" value="Delete Food">
+	</form>
+</div>

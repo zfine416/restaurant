@@ -1,23 +1,23 @@
 <div class="all">
-<table>
-<tr>
-<td>Name:</td>
-<td><%= @foods.name %></td>
-</tr>
-<tr>
-<td>Description:</td>
-<td><%= @foods.description %></td>
-</tr>
-<tr>
-<td>Price:</td>
-<td><%= @foods.price %></td>
-</tr>
-<tr>
-<td>Allergens</td>
-<td><%= @foods.allergens %></td>
-</tr>
+	<table>
+		<tr>
+			<td>Name:</td>
+			<td><%= @foods.name %></td>
+		</tr>
+		<tr>
+			<td>Description:</td>
+			<td><%= @foods.description %></td>
+		</tr>
+		<tr>
+			<td>Price:</td>
+			<td>£<%= @foods.price %></td>
+		</tr>
+		<tr>
+			<td>Allergens</td>
+			<td><%= @foods.allergens %></td>
+		</tr>
 
-</table>
+	</table>
 
-<a class = "edit" href="/foods/<%= @foods.id %>/edit">Edit food</a>
+	<a class = "edit" href="/foods/<%= @foods.id %>/edit">Edit food</a>
 </div>

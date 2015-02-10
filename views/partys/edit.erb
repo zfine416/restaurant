@@ -1,18 +1,21 @@
-<h2>Editing</h2>
+<div class = "all">
+	<h2>Editing</h2>
+	<div class = "formbody">
+		<form action="/parties/<%= @parties.id %>" method="POST">
+			<input type="hidden" name="_method" value="PATCH">
+			Amount of guest in party: <input type="number" name='parties[people]' value="<%= @parties.people %>"><br>
 
-<form action="/parties/<%= @parties.id %>" method="POST">
-<input type="hidden" name="_method" value="PATCH">
- Amount of guest in party: <input type="number" name='parties[people]' value="<%= @parties.people %>"><br>
- 
- <label for="paid">Paid</label>
-  <input name="parties[paid]" type="hidden" value="false" />
-  <input id="paid" name="parties[paid]" type="checkbox" value="true" />
-  <br>
+			<label for="paid">Paid</label>
+			<input name="parties[paid]" type="hidden" value="false" />
+			<input id="paid" name="parties[paid]" type="checkbox" value="true" />
+			<br>
+		</div>
+		<input class = "sub" type="submit">
+	</form>
 
- <input type="submit">
-</form>
-
-<form action="/parties/<%= @parties.id %>" method="POST">
- <input type="hidden" name="_method" value="DELETE">
- <input type="submit" value="Delete Food">
-</form>
+	<br>
+	<form class = "remove" action="/parties/<%= @parties.id %>" method="POST">
+		<input type="hidden" name="_method" value="DELETE">
+		<input type="submit" value="Delete Food">
+	</form>
+</div>

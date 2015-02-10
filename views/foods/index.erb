@@ -1,11 +1,11 @@
 <div class = "all">
-<h2>MENU</h2>
-<ul>
-<% @foods.each do |food| %>
-<a href="foods/<%= food.id %>"><%= food.name %></a></br>
-<% end %>
-</ul>
-<br>
-<div class = "add"><a href="foods/new">Add New</a></div>
+	<h2>MENU</h2>
+	<ul>
+		<% @foods.each do |food| %>
+		<a href="foods/<%= food.id %>"><%= food.name %></a></br>
+		<% end %>
+	</ul>
+	<br>
+	<div class = "add"><a href="foods/new">Add New</a></div>
 
 </div>

@@ -27,7 +27,7 @@
         <li><%= this.name %> x <%= @party.orders.where("food_id=#{this.id}").count %> 
           <form action="/orders" method="post">
             <input type = "hidden" name = "_method" value="delete">
-            <input type = "submit" value="delete"> 
+            <input class = "delete" type = "submit" value="delete"> 
             <input type = "hidden" name = "food_id" value="<%= this.id %>">
             <input type = "hidden" name = "party_id" value="<%= @party.id %>">
           </form>
@@ -40,13 +40,13 @@
   <div class = "addnew">
    <h2>Add New</h2>
    <form action="/orders" method="post">
-    Food <select name="orders[food_id]">
+    Food <select class = "sub" name="orders[food_id]">
     <% @foods.each do |food| %>
-    <option value="<%= food.id %>"><%= food.name %></option>
+    <option class = "sub" value="<%= food.id %>"><%= food.name %></option>
     <% end %>
   </select>
   <input type="hidden" name="orders[party_id]" value="<%= @party.id %>">
-  <input class = "submit" type = "submit">
+  <input class = "sub" type = "submit">
 </form>
 
 <br>

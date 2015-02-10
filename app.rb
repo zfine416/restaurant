@@ -1,5 +1,5 @@
 Dir["models/*.rb"].each do |file|
-  require_relative file
+	require_relative file
 end
 
 class Restaurants < Sinatra::Base

@@ -4,175 +4,254 @@
 	border:0;
 	font:inherit;
 }
+
+.all input >.checkout{
+	background: black;
+	color:white;
+	padding: 10px;
+	border-radius: 5px;
+	margin-top: 10px;
+	font-weight: bold;
+}
+
+.checkout{
+	background: black;
+	font-size: 20px;
+	padding:0 10 0 10;
+	border-radius: 5px;
+}
 .edit{
 	border: 3px solid black;
 	border-radius: 5px;
 	background-color: black;
 }
-img{
-	border-radius: 10px;
-	opacity: 0.8;
-}
-h1{
-	font-size: 40px;
-	color:white;
-}
-body{
-	background-image: url(http://i.imgur.com/sgc4VlP.gif);
-	background-size: cover;
-}
-.receipt{
-	border-radius: 8px;
-	font-size: 28px;
-	background-color: black;
-	display: inline-block;
-	margin-top: 15px;
+/*input{
+	color:black;
 }
 
-.bill{
-	font-size: 24px;
-}
-nav{
-	background-color: rgba(0,0,0,.3);
-	overflow: auto;
-	text-align: center;
-	margin:0 auto;
+form{
+	color: black;
+	}*/
+	img{
+		border-radius: 10px;
+		opacity: 0.8;
+	}
 
-}
+	body{
+		background-image: url(http://i.imgur.com/sgc4VlP.gif);
+		background-size: cover;
+	}
+	.receipt{
+		border-radius: 8px;
+		font-size: 28px;
+		background-color: black;
+		display: inline-block;
+		margin-top: 15px;
+	}
 
-nav li{
-	display:inline;
-}
+	.pizza{
+		text-align: center;
+		color:white;
+		font-size: 40px;
+		font-weight: bold;
+		background-color: rgba(0,0,0,.3);
+		width: 300px;
+		margin: 0 auto;
+		border-radius: 5px;
+	}
 
-nav a{
-	text-decoration: none;
-	color:white;
-	font-size: 50px;
-	font-family: 'Lobster', cursive;
-	padding: 60px;
-}
 
-nav a:hover{
-	text-decoration: overline;
-	color:#98FB98;
-}
-.formbody{
-	margin:0 auto 0 auto;
-	border-radius: 0 0 10 10;
-	width:66%;
-	text-align: center;
-	padding-top: 25px;
-	font-size: 24px;
-	color: white;
+	.delete{
+		background-color: black;
+		color: red;
+	}
 
-}
-.add{
-	border:2px solid black;
-	display: inline;
-	padding-left: 10px;
-	padding-right: 10px;
-	border-radius: 10px;
-	margin-top: 10px;
-	background-color: black;
-}
-.submit{
-	color:green;
-	border-radius: 5px;
-	margin-top: 10px;
-	margin-bottom: 15px;
-}
-.submit:hover{
-	cursor:pointer;
-}
-.footer{
-	width:100%;
-	height:30px;
-	bottom:0;
-	left:0;
-	color:white;
-	margin-top: 10px;
-}
+	.checkout:hover{
+		cursor: pointer;
+		color:#98FB98; 
+	}
+	.carousel{
+		width:70%;
+		height:400px;
+		margin: 0 auto;
+	}
+	.container img{
+		margin: 0 auto;
+		display: inline-block;
 
-h2{
+	}
+	.carousel-inner > .item > img,
+	.carousel-inner > .item > a > img {
+		width: 70%;
+		margin: auto;
+	}
 
-	font-size:34px;
-	text-align: center;
-	padding-top: 16px;
-	padding-bottom: 10px;
-	margin-left: auto;
-	margin-right: auto;
-	width:66%;
-	text-align: center;
-	color:white;
-}
 
-main a{
-	text-decoration: none;
-	font-family: 'Libre Baskerville', serif;
-	font-size: 18px;
-	color: white;
 
-}
+	.bill{
+		font-size: 24px;
+	}
+	nav{
+		background-color: rgba(0,0,0,.3);
+		text-align: center;
+		margin:0 auto;
 
-main a:hover{
-	color:#98FB98;
-}
+	}
 
-.current{
-	float:right;
-	overflow: auto;
-}
-.sub{
-	cursor: pointer;
-	margin-top: 15px;
-}
+	nav li{
+		display:inline;
+	}
 
-main ul{
-	padding-top: 30px;
-	text-align: center;
-	width:66%;
-	margin: 0 auto 0 auto;
-}
-.all{
-	background-color: rgba(0,0,0,.3);
-	text-align: center;
-	width:66%;
-	margin: 0 auto;
-	color:white;
-	font-family: 'Libre Baskerville', serif;
-	padding-bottom: 15px;
-	border-radius: 0 0 10 10;
-	overflow: auto;
-}
-.addnew{
-	overflow: auto;
-	float:left;
-	padding: 10% 0 0 10%;
-}
-.new{
+	nav a{
+		text-decoration: none;
+		color:white;
+		font-size: 50px;
+		font-family: 'Lobster', cursive;
+		padding: 60px;
+	}
 
-	background: green;
-	color:white;
-	width: 15%;
-	margin-left: auto;
-	margin-right: auto;
-	display: inline-block;
-	border-radius: 15px;
-}
-ul{
-	list-style-type: none;
-}
-.new:hover{
-	border: 1px solid black;
-}
-table{
-	text-align: center;
-	margin: 0 auto;
-	width:66%;
-	color: white;
-	padding-top: 25px;
-	font-size: 18px;
-}
-.pink:hover{
-	color:#98FB98;
-}
+	nav a:hover{
+		text-decoration: overline;
+		color:#98FB98;
+	}
+
+	nav a:active{
+		color: navy;
+	}
+	.formbody{
+		margin:0 auto 0 auto;
+		border-radius: 0 0 10 10;
+		width:66%;
+		text-align: center;
+		padding-top: 25px;
+		font-size: 24px;
+		color: white;
+
+	}
+
+	.remove{
+		margin-top: 15px;
+		color:black;
+		display: inline-block;
+	}
+	.formbody input{
+		color:black;
+		margin-top: 10px;
+		font-size: 18px;
+	}
+	.add{
+		border:2px solid black;
+		display: inline;
+		padding: 5 10 5 10;
+		border-radius: 10px;
+		margin-top: 10px;
+		background-color: black;
+	}
+
+	.submit:hover{
+		cursor:pointer;
+	}
+	.footer{
+		width:100%;
+		height:30px;
+		bottom:0;
+		left:0;
+		color:white;
+		margin-top: 10px;
+	}
+
+	h2{
+
+		font-size:34px;
+		text-align: center;
+		padding-top: 16px;
+		padding-bottom: 10px;
+		margin-left: auto;
+		margin-right: auto;
+		width:66%;
+		text-align: center;
+		color:white;
+	}
+
+	main a{
+		text-decoration: none;
+		font-family: 'Libre Baskerville', serif;
+		font-size: 18px;
+		color: white;
+
+	}
+
+	main a:hover{
+		color:#98FB98;
+		text-decoration: none;
+	}
+
+	.total{
+		font-size: 36px;
+		padding-bottom:  10px;
+		text-decoration: underline;
+	}
+
+	.current{
+		float:right;
+		overflow: auto;
+		padding: 0 50 0 0;
+	}
+	.sub{
+		background-color: black;
+		font-size: 18px;
+	}
+	input .sub{
+		cursor: pointer;
+		margin-top: 15px;
+		background: black;
+	}
+
+	select .sub{
+		color:navy;
+	}
+	option .sub{
+		color:navy;
+	}
+
+	main ul{
+		padding-top: 30px;
+		text-align: center;
+		width:66%;
+		margin: 0 auto 0 auto;
+	}
+	.all{
+		background-color: rgba(0,0,0,.3);
+		text-align: center;
+		width:66%;
+		margin: 0 auto;
+		color:white;
+		font-family: 'Libre Baskerville', serif;
+		padding-bottom: 15px;
+		border-radius: 0 0 10 10;
+		overflow: auto;
+		border: 1px solid white;
+	}
+	.addnew{
+		overflow: auto;
+		float:left;
+		padding: 10% 0 0 10%;
+	}
+
+	ul{
+		list-style-type: none;
+	}
+	.new:hover{
+		border: 1px solid black;
+	}
+	table{
+		text-align: center;
+		margin: 0 auto;
+		width:66%;
+		color: white;
+		padding-top: 25px;
+		font-size: 18px;
+	}
+	.pink:hover{
+		color:#98FB98;
+	}

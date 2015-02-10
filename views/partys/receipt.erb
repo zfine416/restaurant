@@ -1,37 +1,38 @@
 <div class = "all">
-<table class = "bill">
-	<ul>
-<% @party.foods.uniq.each do |this| %>
-<li><%= this.name %> x <%= @party.orders.where("food_id=#{this.id}").count %>
-<% end %>
-	<tr>
-		<td>Total Bill:   </td>
-		<td> $<%= @party.calculate_bill%></td>
-	</tr>
-	<tr>
-	<td>Suggested Tips</td>
-	</tr>
-	<td>15%</td>
-<td><%= "%.2f" % (@party.calculate_bill * 0.15) %></td>
-	</tr>
-	<tr>
-	<td>20%</td>
-<td><%= "%.2f" % (@party.calculate_bill * 0.20) %></td>
-	</tr>
-	<tr>
-	<td>25%</td>
-<td><%= "%.2f" % (@party.calculate_bill * 0.25) %></td>
-	</tr>
-</table>
+	<h2>Receipt</h2>
+	<table class = "bill">
+		<ul>
+			<% @party.foods.uniq.each do |this| %>
+			<li><%= this.name %> x <%= @party.orders.where("food_id=#{this.id}").count %>
+				<% end %>
+				<tr class = "total">
+					<td>Total Bill:   </td>
+					<td> £<%= @party.calculate_bill%></td>
+				</tr>
+				<tr>
+					<td>Suggested Tips</td>
+				</tr>
+				<td>15%</td>
+				<td>£<%= "%.2f" % (@party.calculate_bill * 0.15) %></td>
+			</tr>
+			<tr>
+				<td>20%</td>
+				<td>£<%= "%.2f" % (@party.calculate_bill * 0.20) %></td>
+			</tr>
+			<tr>
+				<td>25%</td>
+				<td>£<%= "%.2f" % (@party.calculate_bill * 0.25) %></td>
+			</tr>
+		</table>
 
 
-<form action="/parties/<%= @party.id %>/checkout" method="POST"> 
-<input type="hidden" name="_method" value="PATCH">
- <label for="paid">Paid</label>
-  <input name="parties[paid]" type="hidden" value="false" />
-  <input id="paid" name="parties[paid]" type="checkbox" value="true" />
-  <br>
- <input type="submit">
-</form>
-</div>
+		<form action="/parties/<%= @party.id %>/checkout" method="POST"> 
+			<input type="hidden" name="_method" value="PATCH">
+			<label for="paid">Paid</label>
+			<input name="parties[paid]" type="hidden" value="false" />
+			<input id="paid" name="parties[paid]" type="checkbox" value="true" />
+			<br>
+			<input class = "checkout" type="submit" value="CHECKOUT">
+		</form>
+	</div>
 

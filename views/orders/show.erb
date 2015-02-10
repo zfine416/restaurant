@@ -1,8 +1,8 @@
 <h2>Party <%=@party.id%> </h2>
 <ul>
-<% @party.foods.each do |this| %>
-<li><%= this.name %></li>
-<% end %>
+	<% @party.foods.each do |this| %>
+	<li><%= this.name %></li>
+	<% end %>
 </ul>
 
 <a href="/orders/<%= @party.id %>/edit">Edit Order</a>
